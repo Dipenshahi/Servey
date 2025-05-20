@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  color: #e0e0e0;
+}
+
+.container {
+  background: #121212;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+  width: 90%;
+  max-width: 450px;
+  padding: 30px 40px;
+  text-align: center;
+  position: relative;
+  border: 2px solid #2196f3;
+}
+
+h2, h3 {
+  color: #90caf9;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin: 15px 0 5px 0;
+  font-weight: 600;
+  color: #bbdefb;
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 2px solid #64b5f6;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #42a5f5;
+  outline: none;
+  background-color: #121212;
+}
+
+button {
+  background: #2196f3;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 25px;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #42a5f5;
+}
+
+.form-section {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.form-section.active {
+  display: block;
+  opacity: 1;
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 480px) {
+  body {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .container {
+    width: 95%;
+    padding: 20px;
+    border-width: 1px;
+  }
+
+  h2, h3 {
+    font-size: 1.5rem;
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  textarea,
+  select {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+}

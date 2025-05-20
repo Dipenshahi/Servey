@@ -1,0 +1,85 @@
+1<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Survey of Her(Shuva)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Survey</h2>
+    <form id="surveyForm" action="https://formspree.io/f/xkgrekve" method="POST">
+      <input type="hidden" name="_replyto" value="dipenshahi2009@gmail.com" />
+      
+      <section class="form-section active" id="section1">
+        <h3>About You</h3>
+        <label for="name">What's your name?</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+        <label for="birthday">When is your birthday?</label>
+        <input type="date" id="birthday" name="birthday" required />
+        <label for="hobby">What's your favorite hobby?</label>
+        <input type="text" id="hobby" name="hobby" placeholder="Enter your hobby" required />
+        <button type="button" class="next-btn">Next</button>
+      </section>
+
+      <section class="form-section" id="section2">
+        <h3>Your Favorites</h3>
+        <label for="crush">Who is your crush?</label>
+        <input type="text" id="crush" name="crush" placeholder="Enter your crush's name" required />
+        <label for="song">Favorite song?</label>
+        <input type="text" id="song" name="song" placeholder="Enter your favorite song" required />
+        <label for="favoriteThing">Her favorite thing?</label>
+        <input type="text" id="favoriteThing" name="favoriteThing" placeholder="Enter her favorite thing" required />
+        <label for="bestFriend">Best friend?</label>
+        <input type="text" id="bestFriend" name="bestFriend" placeholder="Enter her best friend" required />
+        <label for="color">Favorite color?</label>
+        <input type="text" id="color" name="color" placeholder="Enter your favorite color" required />
+        <label for="food">Favorite food?</label>
+        <input type="text" id="food" name="food" placeholder="Enter your favorite food" required />
+        <button type="button" class="prev-btn">Previous</button>
+        <button type="button" class="next-btn">Next</button>
+      </section>
+
+      <section class="form-section" id="section3">
+        <h3>Just for Fun</h3>
+        <label for="bestmemory">What's your best memory?</label>
+        <input type="text" id="bestmemory" name="bestmemory" placeholder="Enter your best memory" required />
+        <label for="worstmemory">What's your worst memory?</label>
+        <input type="text" id="worstmemory" name="worstmemory" placeholder="Enter your worst memory" required />
+        <label for="coffeeOrTea">Coffee or Tea?</label>
+        <select id="coffeeOrTea" name="coffeeOrTea" required>
+          <option value="" disabled selected>Select one</option>
+          <option value="Coffee">Coffee</option>
+          <option value="Tea">Tea</option>
+        </select>
+        <label for="dogOrCat">Dog or Cat?</label>
+        <select id="dogOrCat" name="dogOrCat" required>
+          <option value="" disabled selected>Select one</option>
+          <option value="Dog">Dog</option>
+          <option value="Cat">Cat</option>
+        </select>
+        <button type="button" class="prev-btn">Previous</button>
+        <button type="button" class="next-btn">Next</button>
+      </section>
+
+      <section class="form-section" id="section4">
+        <h3>Final Thoughts</h3>
+        <label for="makesday">What is one thing that makes your day?</label>
+        <input type="text" id="makesday" name="makesday" placeholder="Enter something that makes your day" required />
+        <label for="message">Leave a message for me 💌</label>
+        <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+        <button type="button" class="prev-btn">Previous</button>
+        <button type="submit">Submit</button>
+      </section>
+
+      <section class="form-section" id="thankyou" style="display:none;">
+        <h3>Thank you for completing the survey! 😊</h3>
+        <p>Your answers mean a lot to me.</p>
+      </section>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
